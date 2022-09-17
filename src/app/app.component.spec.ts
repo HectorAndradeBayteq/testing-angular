@@ -32,4 +32,29 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('Testing app is running!');
   });
+
+  it(`2 + 3 should be 5`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.add(2,3)).toEqual(5);
+  });
+
+  it(`10 + 3 should be 7`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.subtract(10,3)).toEqual(7);
+  });
+
+  it(`2 * 3 should be 6`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.multiply(2,3)).toEqual(6);
+  });
+
+  it(`10 / 2 should be 5`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.divide(10,2)).toEqual(5);
+  });
+
 });
